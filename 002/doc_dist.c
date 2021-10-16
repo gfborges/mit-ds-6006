@@ -21,13 +21,10 @@ double dot_product(HashTable* doc1, HashTable* doc2) {
 double normal(HashTable* doc) {
     int x = 0;
     Item* curr = doc->last;
-    printf("[x]");
     while(curr){
         x += curr->value * curr->value;
-        printf("(%s,%d)", curr->key, curr->value);
         curr = curr->prev;
     }
-    printf("\n");
     return sqrt(x);
 }
 
